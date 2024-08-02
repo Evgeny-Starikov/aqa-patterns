@@ -1,5 +1,6 @@
 import data.Generate;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 
@@ -7,7 +8,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class DeliveryCardTest {
+class DeliveryCardTest {
 
     @BeforeEach
     void setup() {
@@ -16,6 +17,7 @@ public class DeliveryCardTest {
     }
 
     @Test
+    @DisplayName("Should successful plan and replan meeting")
     void shouldSuccessfulPlanAndReplanMeeting() {
 
         var validUser = Generate.Registration.generateUser("ru");
