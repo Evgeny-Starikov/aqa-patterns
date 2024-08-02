@@ -32,11 +32,13 @@ public class DeliveryCardTest {
         $("[data-test-id=agreement]").click();
         $(".button").click();
 
+
         $("[data-test-id='success-notification']").shouldHave(text("Успешно! Встреча успешно запланирована на " + firstMeetingDate));
 
         $("[data-test-id='date'] input").doubleClick().sendKeys(Keys.BACK_SPACE);
         $("[data-test-id='date'] input").setValue(secondMeetingDate);
         $(".button").click();
+
 
         $("[data-test-id='replan-notification'] .button").click();
 
